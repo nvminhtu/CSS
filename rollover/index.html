@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+    jQuery(document).ready(function($) {
+      $ori_src = $('img').attr('src');
+      $('img').mouseover(function() {
+        $url = $(this).attr('rel');
+        this.src=$url;
+      }).mouseleave(function() {
+        this.src= $ori_src;
+      });
+    });
+  </script>
+</head>
+<body>
+  <img rel="img/SPLwebsite_RR_colourSMALL1.png" src="img/SPLwebsite_RR_monoSMALL1.png" height="170" width="245" alt="">
+</body>
+</html>
